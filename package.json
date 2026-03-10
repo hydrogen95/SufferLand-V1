@@ -1,0 +1,23 @@
+{
+  "name": "sufferland-website",
+  "version": "1.0.0",
+  "description": "SUFFERLAND Minecraft Server Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "node-fetch": "^3.3.2"
+  },
+  "keywords": [
+    "minecraft",
+    "server",
+    "website",
+    "sufferland"
+  ],
+  "author": "SUFFERLAND",
+  "license": "MIT"
+}

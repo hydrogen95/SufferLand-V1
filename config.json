@@ -1,0 +1,117 @@
+{
+  "server": {
+    "name": "SUFFERLAND",
+    "tagline": "SwordSMP x InfuseSMP x Economy",
+    "description": "SUFFERLAND is a SwordSMP x InfuseSMP x Economy survival server that combines competitive PvP combat with progression systems and a player-driven economy.",
+    "features": [
+      "Custom SwordSMP combat mechanics",
+      "InfuseSMP item enhancements and abilities",
+      "Player trading economy",
+      "Auction and trading features",
+      "Rank progression perks",
+      "Competitive survival gameplay",
+      "Balanced PvP and grinding progression"
+    ],
+    "ip": "suffer.srein.xyz",
+    "port": "25567",
+    "discord": "https://discord.gg/XaUBr97NUW"
+  },
+  "ranks": [
+    {
+      "id": "vip",
+      "name": "VIP",
+      "price": "₱50",
+      "color": "#00FF00",
+      "perks": [
+        "2x Homes",
+        "10x Concurrent Auctions",
+        "/grindstone Command",
+        "/disposal Command",
+        "/ec Command",
+        "/kit Command"
+      ]
+    },
+    {
+      "id": "mvp",
+      "name": "MVP",
+      "price": "₱100",
+      "color": "#00FFFF",
+      "perks": [
+        "3x Homes",
+        "15x Concurrent Auctions",
+        "/cartographytable Command",
+        "/stonecutter Command",
+        "/disposal Command",
+        "/craft Command",
+        "/grindstone Command",
+        "/kit Command"
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "ELITE",
+      "price": "₱150",
+      "color": "#FF00FF",
+      "perks": [
+        "4x Homes",
+        "20x Concurrent Auctions",
+        "/craft Command",
+        "/ec Command",
+        "/disposal Command",
+        "/stonecutter Command",
+        "/grindstone Command",
+        "/repair Command",
+        "/anvil Command",
+        "/cartographytable Command",
+        "/kit Command"
+      ]
+    },
+    {
+      "id": "giant",
+      "name": "GIANT",
+      "price": "₱200",
+      "color": "#FF6600",
+      "perks": [
+        "5x Homes",
+        "25x Concurrent Auctions",
+        "/craft Command",
+        "/ec Command",
+        "/disposal Command",
+        "/stonecutter Command",
+        "/grindstone Command",
+        "/anvil Command",
+        "/smithingtable Command",
+        "/cartographytable Command",
+        "/repair Command",
+        "/ptime Command",
+        "/kit Command"
+      ]
+    },
+    {
+      "id": "titan",
+      "name": "TITAN",
+      "price": "₱400",
+      "color": "#FF0000",
+      "perks": [
+        "7x Homes",
+        "30x Concurrent Auctions",
+        "/craft Command",
+        "/cartographytable Command",
+        "/ec Command",
+        "/stonecutter Command",
+        "/grindstone Command",
+        "/anvil Command",
+        "/smithingtable Command",
+        "/ptime Command",
+        "/pweather Command",
+        "/repair Command",
+        "/near Command",
+        "/kit Command"
+      ]
+    }
+  ],
+  "admin": {
+    "username": "admin",
+    "password": "sufferland2024"
+  }
+}

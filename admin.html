@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - SUFFERLAND</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <!-- Admin Navigation -->
+    <nav class="admin-nav">
+        <div class="admin-nav-brand">
+            <img src="logo.png" alt="SUFFERLAND Logo">
+            <h1>Admin Panel</h1>
+        </div>
+        <div class="admin-nav-actions">
+            <a href="index.html" target="_blank" class="admin-btn admin-btn-secondary">
+                <i class="fas fa-external-link-alt"></i> View Site
+            </a>
+            <button class="admin-btn admin-btn-primary" onclick="saveAllChanges()">
+                <i class="fas fa-save"></i> Save All Changes
+            </button>
+            <button class="admin-btn admin-btn-secondary" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Admin Container -->
+    <div class="admin-container">
+        <!-- Tabs -->
+        <div class="admin-tabs">
+            <button class="admin-tab active" onclick="switchTab('server')">
+                <i class="fas fa-server"></i> Server Info
+            </button>
+            <button class="admin-tab" onclick="switchTab('ranks')">
+                <i class="fas fa-crown"></i> Ranks
+            </button>
+            <button class="admin-tab" onclick="switchTab('account')">
+                <i class="fas fa-user-shield"></i> Account
+            </button>
+        </div>
+
+        <!-- Server Info Panel -->
+        <div class="admin-panel active" id="panel-server">
+            <div class="admin-card">
+                <h3><i class="fas fa-info-circle"></i> Server Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="server-name">Server Name</label>
+                        <input type="text" id="server-name" placeholder="Enter server name">
+                    </div>
+                    <div class="form-group">
+                        <label for="server-tagline">Tagline</label>
+                        <input type="text" id="server-tagline" placeholder="Enter tagline">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="server-description">Description</label>
+                    <textarea id="server-description" placeholder="Enter server description"></textarea>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <h3><i class="fas fa-network-wired"></i> Connection Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="server-ip">Server IP</label>
+                        <input type="text" id="server-ip" placeholder="Enter server IP">
+                    </div>
+                    <div class="form-group">
+                        <label for="server-port">Port</label>
+                        <input type="text" id="server-port" placeholder="Enter port">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="discord-link">Discord Invite Link</label>
+                    <input type="text" id="discord-link" placeholder="Enter Discord invite URL">
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <h3><i class="fas fa-list"></i> Server Features</h3>
+                <div id="features-container">
+                    <!-- Features will be loaded here -->
+                </div>
+                <button class="add-perk-btn" onclick="addFeature()">
+                    <i class="fas fa-plus"></i> Add Feature
+                </button>
+            </div>
+        </div>
+
+        <!-- Ranks Panel -->
+        <div class="admin-panel" id="panel-ranks">
+            <div id="ranks-edit-container">
+                <!-- Rank cards will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Account Panel -->
+        <div class="admin-panel" id="panel-account">
+            <div class="admin-card">
+                <h3><i class="fas fa-key"></i> Change Admin Credentials</h3>
+                <div class="form-group">
+                    <label for="new-username">New Username</label>
+                    <input type="text" id="new-username" placeholder="Enter new username">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" placeholder="Enter new password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm new password">
+                </div>
+                <button class="admin-btn admin-btn-primary" onclick="updateCredentials()">
+                    <i class="fas fa-save"></i> Update Credentials
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Status Toast -->
+    <div class="save-status" id="save-status">
+        <i class="fas fa-check-circle"></i> Changes saved successfully!
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

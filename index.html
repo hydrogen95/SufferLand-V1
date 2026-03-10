@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUFFERLAND - SwordSMP x InfuseSMP x Economy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="logo.png" alt="SUFFERLAND Logo" class="logo-img">
+                <span class="logo-text">SUFFERLAND</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#ranks" class="nav-link">Ranks</a></li>
+                <li><a href="#status" class="nav-link">Status</a></li>
+                <li><a href="https://discord.gg/XaUBr97NUW" target="_blank" class="nav-link discord-link"><i class="fab fa-discord"></i> Discord</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="pixel-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="logo.png" alt="SUFFERLAND" class="hero-logo">
+                <div class="logo-glow"></div>
+            </div>
+            <h1 class="hero-title">SUFFERLAND</h1>
+            <p class="hero-tagline" id="server-tagline">SwordSMP x InfuseSMP x Economy</p>
+            <div class="hero-buttons">
+                <a href="#status" class="btn btn-primary">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Join Server</span>
+                </a>
+                <a href="#ranks" class="btn btn-secondary">
+                    <i class="fas fa-crown"></i>
+                    <span>View Ranks</span>
+                </a>
+                <a href="https://discord.gg/XaUBr97NUW" target="_blank" class="btn btn-discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Join Discord</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- Server Status Section -->
+    <section id="status" class="status-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-signal"></i> Live Status</span>
+                <h2 class="section-title">Server Information</h2>
+                <p class="section-subtitle">Connect and start your adventure</p>
+            </div>
+            <div class="status-grid">
+                <div class="status-card main-status">
+                    <div class="status-header">
+                        <div class="status-indicator" id="server-status-indicator">
+                            <span class="pulse"></span>
+                            <span class="status-text" id="server-status-text">Checking...</span>
+                        </div>
+                    </div>
+                    <div class="server-info">
+                        <div class="info-item">
+                            <i class="fas fa-server"></i>
+                            <div class="info-content">
+                                <span class="info-label">Server IP</span>
+                                <span class="info-value" id="server-ip">suffer.srein.xyz</span>
+                            </div>
+                            <button class="copy-btn" onclick="copyIP()" title="Copy IP">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-plug"></i>
+                            <div class="info-content">
+                                <span class="info-label">Port</span>
+                                <span class="info-value" id="server-port">25567</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-card players-status">
+                    <div class="players-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="players-count">
+                        <span class="count-online" id="players-online">0</span>
+                        <span class="count-separator">/</span>
+                        <span class="count-max" id="players-max">0</span>
+                    </div>
+                    <span class="players-label">Players Online</span>
+                    <div class="players-bar">
+                        <div class="players-progress" id="players-progress"></div>
+                    </div>
+                </div>
+                <div class="status-card version-status">
+                    <div class="version-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <span class="version-label">Version</span>
+                    <span class="version-value" id="server-version">1.20+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-info-circle"></i> About Us</span>
+                <h2 class="section-title">Welcome to SUFFERLAND</h2>
+                <p class="section-subtitle">The ultimate Minecraft survival experience</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description" id="server-description">
+                        SUFFERLAND is a SwordSMP x InfuseSMP x Economy survival server that combines competitive PvP combat with progression systems and a player-driven economy.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-sword"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>SwordSMP Combat</h4>
+                                <p>Custom combat mechanics for intense PvP battles</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>InfuseSMP Abilities</h4>
+                                <p>Item enhancements and special abilities</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Player Economy</h4>
+                                <p>Trading, auctions, and player-driven market</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Rank Progression</h4>
+                                <p>Unlock perks and commands as you rank up</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="floating-blocks">
+                        <div class="block block-1"></div>
+                        <div class="block block-2"></div>
+                        <div class="block block-3"></div>
+                        <div class="block block-4"></div>
+                        <div class="block block-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ranks Section -->
+    <section id="ranks" class="ranks-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-crown"></i> Rank Shop</span>
+                <h2 class="section-title">Choose Your Rank</h2>
+                <p class="section-subtitle">Unlock exclusive perks and commands</p>
+            </div>
+            <div class="ranks-grid" id="ranks-container">
+                <!-- Ranks will be loaded dynamically -->
+            </div>
+            <div class="ranks-note">
+                <i class="fas fa-info-circle"></i>
+                <p>Contact server staff to purchase ranks. All purchases help keep the server running!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="gradient-orb orb-cta"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join?</h2>
+                <p>Connect to SUFFERLAND and start your adventure today!</p>
+                <div class="cta-buttons">
+                    <a href="#status" class="btn btn-primary btn-large">
+                        <i class="fas fa-play"></i>
+                        <span>Join Now</span>
+                    </a>
+                    <a href="https://discord.gg/XaUBr97NUW" target="_blank" class="btn btn-discord btn-large">
+                        <i class="fab fa-discord"></i>
+                        <span>Join Discord</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="SUFFERLAND" class="footer-logo">
+                    <h3>SUFFERLAND</h3>
+                    <p>SwordSMP x InfuseSMP x Economy</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#ranks">Ranks</a></li>
+                            <li><a href="#status">Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="https://discord.gg/XaUBr97NUW" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SUFFERLAND. All rights reserved.</p>
+                <a href="login.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
